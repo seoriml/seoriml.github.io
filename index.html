@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hamster</title>
+    <style>
+      @font-face {
+        font-family: "ONE-Mobile-POP";
+        src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff")
+          format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      :root {
+        /* color */
+        --pink: pink;
+        --stroke: black;
+      }
+
+      * {
+        box-sizing: border-box;
+        font-family: "ONE-Mobile-POP";
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      /* animation */
+      @keyframes bounce {
+        50% {
+          transform: translateY(5px);
+        }
+      }
+
+      @keyframes head-bounce {
+        50% {
+          transform: scaleX(1.05);
+        }
+      }
+
+      @keyframes face-bounce {
+        50% {
+          top: 59%;
+        }
+      }
+
+      @keyframes heartbeat {
+        0% {
+          transform: rotate(-35deg);
+        }
+        50% {
+          transform: rotate(-45deg);
+        }
+        100% {
+          transform: rotate(-35deg);
+        }
+      }
+
+      @keyframes wobbly {
+        0% {
+          transform: skew(0deg, 0deg);
+        }
+        25% {
+          transform: skew(3deg, 0deg);
+        }
+        50% {
+          transform: skew(-3deg, 0deg);
+        }
+        75% {
+          transform: skew(0deg, 3deg);
+        }
+        100% {
+          transform: skew(0deg, -3deg);
+        }
+      }
+
+      .container {
+        background-color: #fdffcc;
+        margin: 150px auto;
+        padding-top: 50px;
+        width: 350px;
+        height: 350px;
+        border-radius: 100%;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* 하트 */
+      .heart-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 160px;
+      }
+      .heart {
+        width: 25px;
+        height: 25px;
+        background-color: var(--pink);
+        animation: heartbeat 1s infinite;
+      }
+      .heart::before,
+      .heart::after {
+        content: "";
+        width: 25px;
+        height: 25px;
+        background-color: var(--pink);
+        position: absolute;
+        border-radius: 50%;
+      }
+      .heart::before {
+        top: -15px;
+        left: 0px;
+      }
+      .heart::after {
+        top: 0px;
+        left: 15px;
+      }
+
+      /* 해피 글자 */
+      .text {
+        font-size: 36px;
+        text-align: center;
+        color: white;
+        -webkit-text-stroke: 1.5px var(--stroke);
+        transform: translateY(10px);
+        animation: wobbly 2s infinite alternate;
+      }
+
+      /* 햄스터 */
+      .hamster {
+        animation: bounce 1s infinite alternate;
+      }
+      /* 머리 */
+      .head {
+        text-align: center;
+        animation: bounce 1s infinite linear;
+      }
+      .hair {
+        animation: head-bounce 1s infinite linear;
+      }
+      .face {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation: face-bounce 1s infinite linear;
+      }
+      .cheek-wrapper {
+        position: absolute;
+        width: 120px;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-between;
+      }
+      .cheek {
+        width: 25px;
+        height: 20px;
+        background-color: lightpink;
+        border-radius: 100%;
+        filter: blur(5px);
+      }
+
+      .inner-wrapper {
+        display: flex;
+      }
+
+      .cheek-inner {
+        background-color: var(--stroke);
+        width: 1.5px;
+        height: 6px;
+        margin: 10px 3px;
+        transform: rotate(40deg);
+      }
+
+      .body {
+        width: 150px;
+        height: 50px;
+        background-color: var(--pink);
+        border-left: 3px solid var(--stroke);
+        border-right: 3px solid var(--stroke);
+        position: absolute;
+        bottom: -20%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+        border-radius: 150px 150px 0 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hand {
+        padding-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text">해 피 ~</div>
+      <div class="heart-wrapper">
+        <div class="heart"></div>
+        <div class="heart"></div>
+      </div>
+      <div class="hamster">
+        <div class="head">
+          <div class="hair">
+            <img src="/img/hamster/head.svg" alt="" />
+          </div>
+          <div class="face">
+            <img src="/img/hamster/face.svg" alt="" />
+          </div>
+          <div class="cheek-wrapper">
+            <div class="cheek left"></div>
+            <div class="cheek right"></div>
+          </div>
+          <div class="cheek-wrapper">
+            <div class="inner-wrapper">
+              <div class="cheek-inner"></div>
+              <div class="cheek-inner"></div>
+            </div>
+            <div class="inner-wrapper">
+              <div class="cheek-inner"></div>
+              <div class="cheek-inner"></div>
+            </div>
+          </div>
+        </div>
+        <div class="body">
+          <img class="hand" src="/img/hamster/hand.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
