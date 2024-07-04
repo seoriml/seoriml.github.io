@@ -2,7 +2,7 @@
 
 // 모바일헤더
 document.addEventListener("DOMContentLoaded", () => {
-  const menuMobile = document.getElementById("menu_mobile");
+  const menuMobile = document.getElementById("nav_mobile");
 
   // 메뉴 토글 함수
   const toggleMenu = () => {

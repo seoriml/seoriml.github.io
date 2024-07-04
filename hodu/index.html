@@ -12,26 +12,27 @@
     <!-- 헤더 -->
     <header>
       <div class="wrapper">
-        <h2 class="logo">
+        <a class="logo" href="/">
           <img src="./img/logo.svg" alt="호두" />
-        </h2>
-        <ul class="menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Support</a></li>
-          <li>
-            <a href="#" class="button">Download</a>
-          </li>
-        </ul>
+        </a>
+        <nav>
+          <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#" class="button">Download</a></li>
+          </ul>
+        </nav>
+        <!-- 모바일 nav -->
         <div class="nav_mobile_container">
-          <!-- 햄버거 메뉴 -->
-          <div class="hamburger" id="hamburger">
+          <!-- 햄버거 버튼 -->
+          <div id="hamburger">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
           </div>
           <!-- 모바일 메뉴 -->
-          <nav class="nav_mobile" id="menu_mobile">
+          <nav id="nav_mobile">
             <button id="close_menu">
               <img src="./img/arrow-right.svg" />
             </button>
@@ -39,9 +40,7 @@
               <li><a href="#">Home</a></li>
               <li><a href="#">About</a></li>
               <li><a href="#">Support</a></li>
-              <li>
-                <a href="#" class="button">Download</a>
-              </li>
+              <li><a href="#" class="button">Download</a></li>
             </ul>
           </nav>
         </div>
@@ -69,27 +68,11 @@
     </div>
 
     <!-- 메인컨텐츠 -->
-    <div id="content">
-      <button class="top_btn">
-        <svg
-          width="40"
-          height="40"
-          viewBox="0 0 40 40"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M12.35 25.6833L20 18.0499L27.65 25.6833L30 23.3333L20 13.3333L10 23.3333L12.35 25.6833Z"
-            fill="#C4C4C4"
-          />
-        </svg>
-      </button>
+    <div class="content">
       <div class="wrapper">
         <!-- 메인1 -->
-        <section class="main1">
-          <div class="cat_img4">
-            <img src="./img/img_4.jpg" alt="고양이 이미지" />
-          </div>
+        <section id="main1">
+          <img src="./img/img_4.jpg" alt="고양이 이미지" />
           <div class="main1_title">
             <h2>
               Lorem Ipsum is simply<br />
@@ -102,8 +85,9 @@
             </p>
           </div>
         </section>
+
         <!-- 메인2 -->
-        <section class="main2">
+        <section id="main2">
           <h2>dummy text of the printing and dummy</h2>
           <p>
             Lorem Ipsum is simply <span>dummy text</span> of the printing and
@@ -112,14 +96,16 @@
             the 1500s, when an unknown
           </p>
         </section>
+
         <!-- 메인3 -->
-        <section class="main3">
+        <section id="main3">
           <img src="./img/img_1.jpg" alt="고양이 사진1" />
           <img src="./img/img_2.jpg" alt="고양이 사진2" />
           <img src="./img/img_3.jpg" alt="고양이 사진3" />
         </section>
+
         <!-- 메인4 -->
-        <section class="main4">
+        <section id="main4">
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.<br />
@@ -131,8 +117,10 @@
         </section>
       </div>
     </div>
-    <section id="subscribe-container">
-      <div class="subscribe">
+
+    <!-- 구독 -->
+    <section id="subscribe">
+      <div class="subscribe_wrapper">
         <div class="subscribe_title">
           <h2>Subscribe to our Blog post</h2>
           <p>
@@ -141,7 +129,7 @@
             Lorem Ipsum has been the industry's standard dummy text
           </p>
         </div>
-        <form id="subscribe_form" class="subscribe_input" method="post">
+        <form id="subscribe_form" method="post">
           <div class="input_email">
             <img src="./img/mail.svg" alt="" />
             <input
@@ -157,53 +145,40 @@
         </form>
       </div>
     </section>
+
+    <!-- 푸터 -->
     <footer>
       <div class="wrapper">
         <div class="footer_pc">
-          <h2 class="logo">
-            <img src="./img/logo.svg" alt="HODU" />
-          </h2>
+          <a href="/" class="logo">
+            <img src="./img/logo.svg" alt="호두" />
+          </a>
           <ul class="sns">
             <li>
-              <a href="#">
-                <img src="./img/blog.svg" alt="블로그" />
-              </a>
+              <a href="#"><img src="./img/blog.svg" alt="블로그" /></a>
             </li>
             <li>
-              <a href="#">
-                <img src="./img/instagram.svg" alt="인스타그램" />
-              </a>
+              <a href="#"><img src="./img/instagram.svg" alt="인스타그램" /></a>
             </li>
             <li>
-              <a href="#">
-                <img src="./img/facebook.svg" alt="페이스북" />
-              </a>
+              <a href="#"> <img src="./img/facebook.svg" alt="페이스북" /></a>
             </li>
             <li>
-              <a href="#">
-                <img src="./img/youtube.svg" alt="유튜브" />
-              </a>
+              <a href="#"> <img src="./img/youtube.svg" alt="유튜브" /></a>
             </li>
           </ul>
         </div>
+        <!-- 모바일 푸터메뉴 -->
         <ul class="footer_mobile">
-          <li>
-            <a href="#"> About </a>
-          </li>
-          <li>
-            <a href="#"> Blog </a>
-          </li>
-          <li>
-            <a href="#"> Support </a>
-          </li>
-          <li>
-            <a href="#"> Terms of Use </a>
-          </li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Terms of Use</a></li>
         </ul>
       </div>
     </footer>
 
-    <!-- 모달 -->
+    <!-- 구독 모달 -->
     <div
       id="modal"
       style="background: url(./img/modal-bg-img.png) center / cover no-repeat"
@@ -215,5 +190,21 @@
       </div>
       <button id="close_modal" class="button">OK! I Love HODU</button>
     </div>
+
+    <!-- 탑버튼 -->
+    <button class="top_btn">
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 40 40"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12.35 25.6833L20 18.0499L27.65 25.6833L30 23.3333L20 13.3333L10 23.3333L12.35 25.6833Z"
+          fill="#C4C4C4"
+        />
+      </svg>
+    </button>
   </body>
 </html>
