@@ -22,6 +22,23 @@
             <button class="button">Download</button>
           </li>
         </ul>
+        <div class="nav_mobile">
+          <!-- 햄버거 메뉴 -->
+          <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+          <!-- 모바일 메뉴 -->
+          <nav class="menu_mobile" id="menu_mobile">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -118,47 +135,72 @@
             Lorem Ipsum has been the industry's standard dummy text
           </p>
         </div>
-        <div class="subscribe_input">
-          <img src="./img/mail.svg" alt="" />
-          <input type="text" placeholder="Enter your e-mail address" />
+        <form class="subscribe_input" method="post">
+          <div class="input_email">
+            <img src="./img/mail.svg" alt="" />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your e-mail address"
+              required
+            />
+          </div>
           <input
             id="open_modal"
             type="submit"
             value="Subscribe"
             class="button"
           />
-        </div>
+        </form>
       </div>
     </section>
     <footer>
       <div class="wrapper">
-        <h2 class="logo">
-          <img src="./img/logo.svg" alt="HODU" />
-        </h2>
-        <ul class="sns">
+        <div class="footer_pc">
+          <h2 class="logo">
+            <img src="./img/logo.svg" alt="HODU" />
+          </h2>
+          <ul class="sns">
+            <li>
+              <a href="#">
+                <img src="./img/blog.svg" alt="블로그" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./img/instagram.svg" alt="인스타그램" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./img/facebook.svg" alt="페이스북" />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img src="./img/youtube.svg" alt="유튜브" />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <ul class="footer_mobile">
           <li>
-            <a href="#">
-              <img src="./img/blog.svg" alt="블로그" />
-            </a>
+            <a href="#"> About </a>
           </li>
           <li>
-            <a href="#">
-              <img src="./img/instagram.svg" alt="인스타그램" />
-            </a>
+            <a href="#"> Blog </a>
           </li>
           <li>
-            <a href="#">
-              <img src="./img/facebook.svg" alt="페이스북" />
-            </a>
+            <a href="#"> Support </a>
           </li>
           <li>
-            <a href="#">
-              <img src="./img/youtube.svg" alt="유튜브" />
-            </a>
+            <a href="#"> Terms of Use </a>
           </li>
         </ul>
       </div>
     </footer>
+
+    <!-- 모달 -->
     <div
       id="modal"
       style="background: url(./img/modal-bg-img.png) center / contain no-repeat"
