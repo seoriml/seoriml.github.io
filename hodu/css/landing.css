@@ -102,6 +102,7 @@ header .wrapper {
 }
 
 #nav_mobile {
+  display: none;
   flex-direction: column;
   align-items: center;
   position: fixed;
@@ -167,19 +168,19 @@ header .wrapper {
 }
 
 /* 메인컨텐츠 */
-.content {
+main {
   position: relative;
 }
 
 /* 메인1 */
-#main1 {
+.main_img {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 110px;
   padding-top: 80px;
 }
-#main1 img {
+.main_img img {
   width: 660px;
   max-height: 390px;
   max-width: 100%;
@@ -200,29 +201,29 @@ header .wrapper {
 }
 
 /* 메인2 */
-#main2 {
+.desc {
   text-align: center;
   padding-top: 120px;
 }
-#main2 h2 {
+.desc h2 {
   font-size: 48px;
   line-height: 60.1px;
   color: var(--primary-color);
 }
-#main2 p {
+.desc p {
   margin-top: 40px;
 }
-#main2 p span {
+.desc p span {
   color: var(--primary-color);
 }
 
 /* 메인3 */
-#main3 {
+.cat_images {
   display: flex;
   justify-content: space-between;
   padding-top: 88px;
 }
-#main3 img {
+.cat_images img {
   width: calc(100% / 3 - 20px);
   height: 100%;
   /* max-width: 378px; */
@@ -233,7 +234,7 @@ header .wrapper {
 }
 
 /* 메인4 */
-#main4 {
+.more {
   max-width: 938px;
   margin: auto;
   display: flex;
@@ -439,6 +440,9 @@ footer .logo img {
     display: none;
   }
 
+  #nav_mobile {
+    display: block;
+  }
   .nav_mobile_container {
     display: block;
   }
@@ -467,12 +471,12 @@ footer .logo img {
     object-position: center 60px;
   }
 
-  /* 메인1 */
-  #main1 {
+  /* 메인고양이 이미지 설명 */
+  .main_img {
     display: block;
     padding-top: 40px;
   }
-  #main1 img {
+  .main_img img {
     width: 100%;
   }
   .main1_title {
@@ -485,36 +489,36 @@ footer .logo img {
   }
 
   /* 메인2 */
-  #main2 {
+  .desc {
     padding-top: 60px;
   }
-  #main2 h2 {
+  .desc h2 {
     font-size: 24px;
     line-height: 30.05px;
   }
-  #main2 p {
+  .desc p {
     margin-top: 30px;
   }
 
-  /* 메인3 */
-  #main3 {
+  /* 작은사진들 */
+  .cat_images {
     padding: 40px 0 60px 0;
     overflow: hidden;
     gap: 20px;
     /* 우측 margin을 음수 값으로 설정하여 wrapper 밖으로 튀어나가도록 함 */
     margin-right: -20px;
   }
-  #main3 img {
+  .cat_images img {
     width: 260px;
     box-shadow: 10px 10px 20px 0px #00000040;
   }
 
   /* 메인4 */
-  #main4 {
+  .more {
     display: block;
     padding: 0 0 230px 0;
   }
-  #main4 .button {
+  .more .button {
     float: right;
     margin-top: 30px;
   }
