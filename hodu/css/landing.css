@@ -348,6 +348,7 @@ header .wrapper {
 
 .input_email {
   display: flex;
+  width: 100%;
 }
 
 /* 푸터 */

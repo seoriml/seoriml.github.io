@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("close_menu").addEventListener("click", toggleMenu);
 });
 
+// 구독모달
 // 모달 열기
 function openModal() {
   var modal = document.getElementById("modal");
@@ -24,13 +25,18 @@ function closeModal() {
   var modal = document.getElementById("modal");
   modal.style.display = "none";
 }
-// 모달 열기 버튼 클릭 이벤트 핸들러
-var modalOpenButton = document.getElementById("open_modal");
-modalOpenButton.addEventListener("click", function () {
-  openModal();
-});
-// 모달 닫기 버튼 클릭 이벤트 핸들러
-var modalCloseButton = document.getElementById("close_modal");
-modalCloseButton.addEventListener("click", function () {
-  closeModal();
+
+document.addEventListener("DOMContentLoaded", function () {
+  // 폼 제출 이벤트 리스너
+  var subscribeForm = document.getElementById("subscribe_form");
+  subscribeForm.addEventListener("submit", function (event) {
+    event.preventDefault(); // 폼의 기본 제출 동작을 막음
+    openModal(); // 모달 열기 함수 호출
+  });
+
+  // 모달 닫기 버튼 클릭 이벤트 핸들러
+  var modalCloseButton = document.getElementById("close_modal");
+  modalCloseButton.addEventListener("click", function () {
+    closeModal(); // 모달 닫기 함수 호출
+  });
 });
