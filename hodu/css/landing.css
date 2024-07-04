@@ -171,6 +171,9 @@ header .wrapper {
 /* 메인컨텐츠 */
 main {
   position: relative;
+}
+
+main .wrapper {
   margin-bottom: 230px;
 }
 
