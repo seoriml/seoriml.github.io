@@ -6,6 +6,7 @@
     <title>랜딩페이지</title>
     <link href="./css/reset.css" rel="stylesheet" />
     <link href="./css/landing.css" rel="stylesheet" />
+    <script src="./js/landing.js"></script>
   </head>
   <body>
     <!-- 헤더 -->
@@ -15,14 +16,14 @@
           <img src="./img/logo.svg" alt="호두" />
         </h2>
         <ul class="menu">
-          <li>Home</li>
-          <li>About</li>
-          <li>Support</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Support</a></li>
           <li>
-            <button class="button">Download</button>
+            <a href="#" class="button">Download</a>
           </li>
         </ul>
-        <div class="nav_mobile">
+        <div class="nav_mobile_container">
           <!-- 햄버거 메뉴 -->
           <div class="hamburger" id="hamburger">
             <div class="line"></div>
@@ -30,12 +31,17 @@
             <div class="line"></div>
           </div>
           <!-- 모바일 메뉴 -->
-          <nav class="menu_mobile" id="menu_mobile">
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#contact">Contact</a></li>
+          <nav class="nav_mobile" id="menu_mobile">
+            <button id="close_menu">
+              <img src="./img/arrow-right.svg" />
+            </button>
+            <ul class="menu_mobile">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Support</a></li>
+              <li>
+                <a href="#" class="button">Download</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -212,32 +218,5 @@
       </div>
       <button id="close_modal" class="button">OK! I Love HODU</button>
     </div>
-
-    <!-- JavaScript -->
-    <script>
-      // 모달 열기
-      function openModal() {
-        var modal = document.getElementById("modal");
-        modal.style.display = "block";
-      }
-
-      // 모달 닫기
-      function closeModal() {
-        var modal = document.getElementById("modal");
-        modal.style.display = "none";
-      }
-
-      // 모달 열기 버튼 클릭 이벤트 핸들러
-      var modalOpenButton = document.getElementById("open_modal");
-      modalOpenButton.addEventListener("click", function () {
-        openModal();
-      });
-
-      // 모달 닫기 버튼 클릭 이벤트 핸들러
-      var modalCloseButton = document.getElementById("close_modal");
-      modalCloseButton.addEventListener("click", function () {
-        closeModal();
-      });
-    </script>
   </body>
 </html>
