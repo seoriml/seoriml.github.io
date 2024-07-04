@@ -390,16 +390,15 @@ footer .logo img {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 999;
-  background-color: red;
-  width: 100%;
+  width: calc(100% - 40px);
   height: 100%;
   max-width: 600px;
-  height: 400px;
+  max-height: 400px;
   box-shadow: 0px 0px 30px 0px #00000033;
   border-radius: 30px;
   align-items: center;
   text-align: center;
-  padding: 60px 0 40px;
+  padding: 60px 50px 40px 50px;
 }
 
 #modal img {
@@ -409,6 +408,9 @@ footer .logo img {
 
 #modal h2 {
   margin-top: 12px;
+  font-size: 36px;
+  line-height: 45.07px;
+  color: #d97652;
 }
 
 #modal p {
@@ -594,5 +596,29 @@ footer .logo img {
 
   .top_btn {
     display: none;
+  }
+
+  #modal {
+    padding: 40px 50px 30px;
+    width: 300px;
+    max-height: 300px;
+  }
+
+  #modal img {
+    width: 60px;
+  }
+
+  #modal h2 {
+    font-size: 24px;
+    line-height: 30.05px;
+  }
+
+  #modal p {
+    font-size: 14px;
+    line-height: 17.53px;
+    margin: 10px 0 28px;
+  }
+
+  #close_modal {
   }
 }
