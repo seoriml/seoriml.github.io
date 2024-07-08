@@ -16,17 +16,6 @@ body {
   font-family: "SpoqaHanSansNeo-Regular";
 }
 
-.sr-only {
-  position: absolute;
-  overflow: hidden;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
 h2 {
   font-weight: 700;
 }
@@ -46,13 +35,15 @@ p {
 .button {
   background-color: var(--primary-color);
   color: white;
-  width: 100%;
   max-width: 140px;
   padding: 15px 30px;
   border-radius: 100px;
   cursor: pointer;
   font-weight: 700;
   text-align: center;
+  display: inline-block;
+  width: 100%;
+  font-size: 16px;
 }
 
 /* 헤더 */
@@ -235,9 +226,14 @@ main .wrapper {
   max-width: 938px;
   margin: auto;
   display: flex;
-  gap: 56px;
+  align-items: center;
+  gap: 50px;
   padding-top: 90px;
   margin-bottom: 190px;
+}
+.more .button {
+  max-width: 147px;
+  height: 50px;
 }
 
 /* 고양이배경 */
@@ -328,13 +324,32 @@ footer .logo img {
   display: flex;
   gap: 20px;
 }
-.sns img {
+.sns li a {
+  display: block;
   width: 42px;
   height: 42px;
-  background: #f29d52;
+  background-color: #f29d52;
+  background-size: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
   border-radius: 100%;
-  padding: 9px;
+  text-indent: -9999px;
+  overflow: hidden;
 }
+
+.blog {
+  background-image: url(../img/blog.svg);
+}
+.instagram {
+  background-image: url(../img/instagram.svg);
+}
+.facebook {
+  background-image: url(../img/facebook.svg);
+}
+.youtube {
+  background-image: url(../img/youtube.svg);
+}
+
 .footer_mobile {
   display: none;
   text-align: right;
@@ -519,6 +534,7 @@ footer .logo img {
   }
   .more .button {
     margin-top: 30px;
+    height: 40px;
   }
 
   /* 구독 */
@@ -562,10 +578,11 @@ footer .logo img {
   footer .footer_pc .logo img {
     width: 112px;
   }
-  .sns img {
+
+  .sns li a {
     width: 32px;
     height: 32px;
-    padding: 6px;
+    background-size: 18px;
   }
 
   .footer_mobile {
