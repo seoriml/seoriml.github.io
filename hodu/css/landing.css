@@ -52,6 +52,7 @@ p {
   border-radius: 100px;
   cursor: pointer;
   font-weight: 700;
+  text-align: center;
 }
 
 /* 헤더 */
@@ -84,17 +85,9 @@ header .wrapper {
 }
 
 /* 햄버거버튼  */
-#hamburger {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+#hamburger img {
   width: 24px;
   height: 24px;
-  cursor: pointer;
-}
-#hamburger .line {
-  height: 2px;
-  background-color: var(--secondary-color);
 }
 
 /* 모바일헤더 */
