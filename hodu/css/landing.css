@@ -147,7 +147,6 @@ header .wrapper {
 .visual_title {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 40px;
 }
 .visual_title h2 {
@@ -453,8 +452,7 @@ footer .logo img {
     text-align: center;
   }
   .visual_title {
-    display: flex;
-    flex-direction: column;
+    align-items: center;
     gap: 30px;
   }
   .visual_title h2 {
