@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Pretendard-Regular";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+input {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 400px;
+  background: linear-gradient(144.07deg, #5572bb 2.13%, #374b7c 102.97%);
+  border-radius: 16px;
+}
+
+.timer h1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #ffffff;
+  padding-top: 40px;
+  border-bottom: 1px solid #3d538a;
+  width: 100%;
+  max-width: 312px;
+  display: block;
+  padding-bottom: 23px;
+}
+
+.labels {
+  display: flex;
+  justify-content: center;
+  gap: 85px;
+  color: #a5b6ee;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14.4px;
+  margin-bottom: 4px;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.inputs input {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(144.07deg, #5572bb 2.13%, #374b7c 102.97%);
+  width: 80px;
+  height: 80px;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #354971;
+}
+
+.colon {
+  width: 6px;
+  height: 26px;
+  color: #a5b6ee;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14.4px;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  gap: 12px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 112px;
+  height: 48px;
+  font-size: 14px;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: left;
+}
+button#start {
+  background: #5180ff;
+}
+
+button#start.pause {
+  background-color: #15c2b8;
+}
+
+button#reset {
+  background: #fb7099;
+}
+
+button:hover {
+  opacity: 0.8;
+}
